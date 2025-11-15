@@ -1,0 +1,103 @@
+{
+  "info": {
+    "name": "stock",
+    "description": "Collection para API de estoque (endpoints em app.py)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Init DB",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/init",
+          "host": ["{{baseUrl}}"],
+          "path": ["init"]
+        }
+      }
+    },
+    {
+      "name": "Registrar Entrada",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"material_id\": 1,\n  \"quantidade\": 10\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/entrada",
+          "host": ["{{baseUrl}}"],
+          "path": ["entrada"]
+        }
+      }
+    },
+    {
+      "name": "Registrar Saida",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"material_id\": 1,\n  \"quantidade\": 2\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/saida",
+          "host": ["{{baseUrl}}"],
+          "path": ["saida"]
+        }
+      }
+    },
+    {
+      "name": "Consultar Estoque",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/estoque",
+          "host": ["{{baseUrl}}"],
+          "path": ["estoque"]
+        }
+      }
+    },
+    {
+      "name": "Historico Movimentacoes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/historico?material_id=1&data_inicio=2025-01-01&data_fim=2025-12-31",
+          "host": ["{{baseUrl}}"],
+          "path": ["historico"],
+          "query": [
+            { "key": "material_id", "value": "1" },
+            { "key": "data_inicio", "value": "2025-01-01" },
+            { "key": "data_fim", "value": "2025-12-31" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Página Inicial (opcional)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/",
+          "host": ["{{baseUrl}}"],
+          "path": [""]
+        }
+      }
+    }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "http://127.0.0.1:5000", "type": "string" }
+  ]
+}

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>Estoque</title></head>
+<body>
+  <h1>Produtos em Estoque</h1>
+  <ul>
+    {% for produto in produtos %}
+      <li>{{ produto['nome'] }} - {{ produto['quantidade'] }} unidades</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
