@@ -24,14 +24,14 @@ C:/estoque_app/venv/Scripts/python.exe -m pip install -r requirements.txt
 C:/estoque_app/venv/Scripts/python.exe app.py
 ```
 
-A API estará disponível em `http://127.0.0.1:5000/`.
+A API estará disponível em `http://127.0.0.1:        /`.  
 
 ## Endpoints principais
 
 ## Scripts úteis
 
 ## Postman
-Importe `stock.postman_collection.json` no Postman. Use o environment `stock` com `baseUrl` = `http://127.0.0.1:5000`.
+Importe `stock.postman_collection.json` no Postman. Use o environment `stock` com `baseUrl` = `http://127.0.0.1:      `.
 
 ## Git
 Este repositório contém os arquivos fonte (não inclui `estoque.db`).
